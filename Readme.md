@@ -1,3 +1,5 @@
+![terraform-azure](https://github.com/karthi770/Azure_Alan-Rodrigues/assets/102706119/f1e08269-a508-4ad6-b3ca-f5c922ecfe38)
+
 Video Courtesy: https://www.youtube.com/watch?v=lH3KT9RUEOA&list=PLLc2nQDXYMHowSZ4Lkq2jnZ0gsJL3ArAw&index=1
 
 The first 4 videos are just Introduction of Azure and terraform so I had nothing much to share and the actual content starts from the 5th.
