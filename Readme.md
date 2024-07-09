@@ -13,7 +13,7 @@ We are creating an identity in Entra ID which can be used in the terraform confi
 We can get the client id and the tenant id from this tab and we can create the client secret with the client credentials.
 ![image](https://github.com/karthi770/Azure_VNet_NSG_Bastion/assets/102706119/0e27e4a2-6cbf-4afd-bba1-9370915f3440)
 Generate the secret and add it the terraform configuration.
-```json
+```js
 //main.tf
 terraform {
   required_providers {
@@ -53,7 +53,7 @@ The default parameters for creating the storage account are:
 - Name
 - Performance
 - Redundancy
-```json
+```js
 //main.tf
 terraform {
   required_providers {
@@ -102,7 +102,7 @@ https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure
 
 ### <u>Video: 8 - Creating a container and Blob:</u>
 
-```json
+```js
 resource "azurerm_storage_container" "data_container" {
   name                  = "data"
   storage_account_name  = azurerm_storage_account.az-storage.name
@@ -119,7 +119,7 @@ resource "azurerm_storage_blob" "az_blob" {
 The container access type is the level of access to the object that is uploaded in the container.  Now the option is Private which means we have no access to the object, once the container_access_type is changed to “blob” we can download the object from the URL that has been assigned to the object.
 ### <u>Video: 9 - Dependencies between</u>
 In every resource block we need to specify the depends on parameter so that when terraform creates the resources it makes sure that the dependencies are met while creating the resources. For example: if we need to create a blob storage we need to make sure that we have a container to store the blob. That can be specified in the block of code shown below:
-```json
+```js
   name                   = "my-awesome-content.zip"
   storage_account_name   = azurerm_storage_account.az-storage.name
   storage_container_name = azurerm_storage_container.data_container.name
@@ -133,7 +133,7 @@ In every resource block we need to specify the depends on parameter so that when
 `terraform destroy` command will delete the resource group which means this will delete all the resources associated with it, so we need to be mindful before using this command.
 
 ### <u>Video: 11 - Using Variables</u>
-```json
+```js
 terraform {
   required_providers {
     azurerm = {
